@@ -18,6 +18,22 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.heading {
+    font-family: var(--font-heading);
+    letter-spacing: -1.16px;
+    font-weight: 700;
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
+
 a {
     text-decoration: none;
 }
@@ -39,6 +55,17 @@ a {
     line-height: 50px;
     background: #171100;
     color: #fff;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
 }
 
 /*--------------------------------------Phần dùng riêng---------------------------------------------*/
@@ -184,15 +211,6 @@ a {
     padding: 64px 0 0 130px;
 }
 
-.hero .content-block .heading {
-    font-family: var(--font-heading);
-    font-size: 5.8rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.17; /* 117.241% */
-    letter-spacing: -1.16px;
-}
-
 .hero .content-block .desc {
     margin-top: 22px;
     color: #5f5b53;
@@ -253,9 +271,204 @@ a {
     font-size: 4.4rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.23; /* 122.727% */
+    line-height: 1.23;
 }
 
 .hero .content-block .desc.stats strong:nth-of-type(2) {
     padding-left: 28px;
+}
+
+/* =========================== Popular ===================================== */
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+/* Popular top */
+.popular .popular-top .info .desc {
+    margin-top: 16px;
+    width: 458px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.popular .popular-top {
+    display: flex;
+    align-items: center;
+}
+
+.popular .popular-top .controls {
+    margin-left: auto;
+}
+
+.popular .popular-top .controls .control-btn {
+    border: none;
+    cursor: pointer;
+}
+
+/* Popular bottom */
+.popular .popular-bottom .course-list {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.popular .popular-bottom .course-list .course-item {
+    flex: 1;
+    border-radius: 12px;
+    border: 1px solid #e2dfda;
+    background: #fff;
+}
+
+.popular .popular-bottom .course-list .course-item:hover {
+    border-color: transparent;
+    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+.popular .popular-bottom .course-list .course-item .thumb {
+    width: calc(100% + 2px);
+    height: 278px;
+    margin: -1px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.popular .popular-bottom .course-list .course-item .info {
+    padding: 16px 22px 22px;
+}
+
+.popular .popular-bottom .course-list .course-item .info .head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular .popular-bottom .course-list .course-item .info .head .title {
+    color: #171100;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.67;
+    padding-right: 8px;
+}
+
+.popular .popular-bottom .course-list .course-item .info .head .rating {
+    display: flex;
+    align-items: center;
+}
+
+.popular .popular-bottom .course-list .course-item .info .head .rating .value {
+    color: #fea31b;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75;
+    margin-left: 6px;
+}
+
+.popular .popular-bottom .course-list .course-item .info .desc {
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.86;
+    margin: 6px 0;
+}
+
+.popular .popular-bottom .course-list .course-item .info .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.popular .popular-bottom .course-list .course-item .info .foot .price {
+    color: #171100;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.popular .popular-bottom .course-list .course-item .info .foot .btn {
+    width: 118px;
+    line-height: 50px;
+    flex-shrink: 0;
+    background: #171100;
+}
+
+.popular .popular-bottom .course-list .course-item .info .foot .btn:hover {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+/* =================================== Feedback ====================================== */
+
+.feedback {
+    margin-top: 135px;
+    padding: 96px 0;
+    background-color: #2e2100;
+}
+
+.feedback .feedback-list .feedback-item {
+    display: flex;
+}
+
+.feedback .feedback-list .feedback-item .info .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback .feedback-list .feedback-item .info .title {
+    margin-top: 18px;
+    color: #f7f7f7;
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.42;
+}
+
+.feedback .feedback-list .feedback-item .info .desc {
+    margin-top: 4px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.86;
+}
+
+.feedback .feedback-list .feedback-item .info .dots {
+    margin-top: 28px;
+    display: flex;
+}
+
+.feedback .feedback-list .feedback-item .info .dots .dot {
+    margin-right: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #634700;
+    cursor: pointer;
+}
+
+.feedback .feedback-list .feedback-item .info .dots .dot.active {
+    background-color: var(--primary-color);
+    cursor: default;
+}
+
+.feedback .feedback-list .feedback-item .content {
+    margin-left: auto;
+    width: 66%;
+}
+
+.feedback .feedback-list .feedback-item .content blockquote {
+    margin-left: 30px;
+    color: #fff;
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.54;
 }
